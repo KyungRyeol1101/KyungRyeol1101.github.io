@@ -29,7 +29,7 @@ force-https: True
 #############
 
 lang: "en"
-author: "KyungRyeo Yoon"
+author: "KyungRyeol Yoon"
 title: "{ KyungRyeol }"
 description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
 keywords: "smith, jones, personal, jekyll, theme"
