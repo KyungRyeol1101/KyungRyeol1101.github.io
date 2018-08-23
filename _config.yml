@@ -156,7 +156,7 @@ email: "kr.yoon1101@gmail.com"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: "John Smith is an awesome person. He lives in Flatland, where he works on two-dimensional engineering projects. In his spare time, John likes to eat cotton candy."
+author_blurb: "재미를 찾아 다니는 개발자"
 author_blurb_image: "/img/author.png"
 
 ##################
@@ -165,13 +165,9 @@ author_blurb_image: "/img/author.png"
 
 social:
   - title: "facebook"
-    url: "https://facebook.com/"
-  - title: "twitter"
-    url: "https://twitter.com/"
+    url: "https://facebook.com/kyungryeol.yoon"
   - title: "github"
     url: "https://github.com/KyungRyeol1101"
-  - title: "bitcoin"
-    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
   - title: "rss"
     url: "/feed.xml"
 
@@ -180,14 +176,6 @@ social:
 ############
 
 err-404-img: "/img/labtocat.png"
-
-##################
-# GPG on Keybase #
-##################
-
-keybase-username: Cris Yoon
-keybase-in-social: True
-keybase-in-footer: True
 
 ################################################################################
 
