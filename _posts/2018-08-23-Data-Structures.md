@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Data Structures & Algorithms
-category: DataStructures
+category: datastructures
 tags: [ 'study' ]
 ---
 
