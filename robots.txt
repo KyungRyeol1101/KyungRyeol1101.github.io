@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://kyungryeol1101.github.io/sitemap.xml
