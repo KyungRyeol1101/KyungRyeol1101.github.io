@@ -59,7 +59,8 @@ lines: # You can add HTML Tags in the Text
   - text: “말은 쉽지, 코드를 보여줘.”
   - text: “중요한 것은 실패하더라도 시도해보는 것이라고 생각한다.”
 
-me-img: "/img/jetpacktocat.png"
+# me-img: "/img/jetpacktocat.png"
+me-img: "https://github.com/KyungRyeol1101.png?size=500"
 
 # To use facebook profile pic comment the previous line and uncomment the following
 # line, and replace 'user_id' with your facebook user id.
