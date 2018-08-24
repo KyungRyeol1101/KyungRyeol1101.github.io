@@ -31,8 +31,8 @@ force-https: True
 lang: "en"
 author: "KyungRyeol Yoon"
 title: "{ KyungRyeol }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+description: "개발에 관련된 블로그를 작성하는 윤경렬의 블로그입니다."
+keywords: "KyungRyeol, Yoon, personal, jekyll, theme"
 favicon: "/img/favicon.ico"
 
 ################
