@@ -85,8 +85,8 @@ me-img: "https://github.com/KyungRyeol1101.png?size=500"
 ##############################
 # Color the browser elements #
 ##############################
-color-browser: "#000000"
-apple-status-bar-style: "black"
+color-browser: "#ffffff"
+apple-status-bar-style: "white"
 
 ################
 # Web app mode #
