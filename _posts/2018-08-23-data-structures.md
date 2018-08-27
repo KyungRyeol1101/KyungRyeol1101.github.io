@@ -36,6 +36,12 @@ tags: [ 'study' ]
     - 파랑
 
 
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+
 머리1 | 머리2 | 머리3 | 뚝배기
 ---- | ---- | ---- | ----
 다리 | 다리1 | 다리2 | 뚝배기깹니다
