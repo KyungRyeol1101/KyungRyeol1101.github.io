@@ -1,5 +1,5 @@
 # Site
-title:              KyungRyeol
+title:              KyungRyeol (Cris)
 bio:                'Minimal, one column jekyll theme.'
 description:        "Moon is a minimal, one column jekyll theme for your blog."
 reading_time:       true
@@ -27,12 +27,12 @@ sass:
 
 # Comments
 disqus_shortname:   kyungryeol1101-github-io
-google_analytics:   UA-124565628-1
+   
 # Social
 # if you don't have any of social below, comment the line.
 #google:
   #plus:            #username
-  #analytics:
+  analytics: UA-124565628-1
   #verify:
   #ad-client:
   #ad-slot:
