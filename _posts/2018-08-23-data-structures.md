@@ -37,20 +37,17 @@ tags: [ 'study' ]
 
 
 First Header | Second Header
------------- | -------------
+|:--------|:-------:|--------:|
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
+{: rules="groups"}
 
-
-머리1 | 머리2 | 머리3 | 뚝배기
----- | ---- | ---- | ----
-다리 | 다리1 | 다리2 | 뚝배기깹니다
-금 | 의 | 환 | 향
 
 | |연산자|연산수행위치|
 |---|---|---|
 | 삽입연산 | push | top |
 | 삭제연산 | pop  | top |
+{: rules="groups"}
 
 * [순차자료구조방식을 통한 스택 구현](https://github.com/)
 * [연결자료구조방식을 통한 스택 구현](https://github.com/)
