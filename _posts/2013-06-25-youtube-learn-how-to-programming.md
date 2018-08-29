@@ -2,13 +2,13 @@
 layout: post
 title:  "프로그래밍을 배워야 하는 이유는?"
 date:   2016-03-15
-excerpt: "Everybody in this country should learn how to program a computer... because it teaches you how to think."
+excerpt: "Everybody in this country should learn how to program a computer... because it teaches you how to think. - Steve Jobs"
 tag:
 - programming
 - youtube
 comments: true
 ---
-<iframe width="560" height="315" src="//www.youtube.com/watch?v=SESuctdE9vM&t=7s" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="//www.facebook.com/devkorea.co.kr/videos/506091856093577/" frameborder="0"> </iframe>
 
 빌게이츠,마크주커버그,드류휴스턴"놀라운 힘"
 
