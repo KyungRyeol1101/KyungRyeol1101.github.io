@@ -8,7 +8,8 @@ tag:
 - youtube
 comments: true
 ---
-<iframe width="560" height="315" src="//youtu.be/SESuctdE9vM" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SESuctdE9vM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 빌게이츠,마크주커버그,드류휴스턴"놀라운 힘"
 
