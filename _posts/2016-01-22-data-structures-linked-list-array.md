@@ -27,7 +27,7 @@ comments: true
 
 ### C++로 구현한 양방향 연결 리스트(Double Linked List)
 
-{% highlight c++ %}
+{% highlight cpp %}
 /**
  * 연결리스트(LinkedList)에 사용할 노드 클래스
  */
