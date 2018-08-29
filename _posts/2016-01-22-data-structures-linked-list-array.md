@@ -28,6 +28,176 @@ comments: true
 ### C++로 구현한 양방향 연결 리스트(Double Linked List)
 
 {% highlight c++ %}
+
+void DoubleList::insertNode(int _data, int _position) {
+	++IDCount;
+	Node *newNode = new Node;
+	newNode->setData(_data);
+	newNode->SetID(IDCount);
+	
+	if (Head == NULL) {
+		Head = newNode;
+		Tail = Head;
+	}
+	else {
+		if (_position == 0) {
+			newNode->setRlink(Head);
+			Head->setLlink(newNode);
+			Head = newNode;
+		}
+		else if (_position == -1) {
+			newNode->setLlink(Tail);
+			Tail->setRlink(newNode);
+			Tail = newNode;
+		}
+		else {
+			Node *before = Head;
+			while ((--_position) > 0)
+			{
+				before = before->getRlink();
+			}
+			if (before->getRlink() != NULL) {
+				before->getRlink()->setLlink(newNode);
+			}
+			newNode->setLlink(before);
+			newNode->setRlink(before->getRlink());
+			before->setRlink(newNode);
+		}
+	}
+}
+
+void DoubleList::delNode(int _location) {
+	if (_location == 0) {
+		Head = Head->getRlink();
+		if (Head != NULL) {
+			Head->setLlink(NULL);
+		}
+	}
+	else {
+		Node *before = Head;
+		while ((--_location) > 0)
+		{
+			before = before->getRlink();
+		}
+		Node *after = before->getRlink()->getRlink();
+		if (after != NULL) {
+			before->setRlink(after);
+			after->setLlink(before);
+		}
+		else {
+			before->setRlink(NULL);
+		}
+	}
+}
+
+void DoubleList::displayNode() {
+	Node *Temp = Head;
+	while (true)
+	{
+		if (Temp == NULL) {
+			break;
+		}
+		else {
+			cout << "ID:" << Temp->GetID() << " Data:" << Temp->getData() << endl;
+			Temp = Temp->getRlink();
+		}
+	}
+}
+
+void DoubleList::AllDel() {
+	while (true)
+	{
+		if (Head == NULL) {
+			break;
+		}
+		else {
+			delNode(0);
+		}
+	}
+}
+
+int DoubleList::CountNode() {
+	int count = 0;
+
+	Node *now = new Node;
+	for (now = Head; now; now = now->getRlink()) {
+		count++;
+	}
+	return count;
+}
+
+int DoubleList::Find(int _location) {
+	Node *current = Head;
+	while ((--_location) >= 1) {
+		current = current->getRlink();
+	}
+	return current->getData();
+}
+
+void DoubleList::Swap(Node * tmp1, Node * tmp2)
+{
+	Node *tmp1Llink = tmp1->getLlink();
+	Node *tmp1Rlink = tmp1->getRlink();
+	Node *tmp2Llink = tmp2->getLlink();
+	Node *tmp2Rlink = tmp2->getRlink();
+
+	if (tmp1 == tmp2) {
+		return;
+	}
+	else if (tmp1->getRlink() == tmp2) {
+		if (tmp1 == Head) {
+			Head = tmp2;
+			if (tmp2 != Tail) {
+				tmp2Rlink->setLlink(tmp1);
+			}
+			else {
+				Tail = tmp1;
+			}
+		}
+		else if (tmp2 == Tail) {
+			Tail = tmp1;
+			tmp1Llink->setRlink(tmp2);
+		}
+		else
+		{
+			tmp2Rlink->setLlink(tmp1);
+			tmp1Llink->setRlink(tmp2);
+		}
+		tmp1->setRlink(tmp2Rlink);
+		tmp2->setLlink(tmp1Llink);
+
+		tmp1->setLlink(tmp2);
+		tmp2->setRlink(tmp1);
+	}
+	else {
+		if (tmp1 == Head) {
+			Head = tmp2;
+			if (tmp2 != Tail) {
+				tmp2Rlink->setLlink(tmp1);
+			}
+			else {
+				Tail = tmp1;
+			}
+		}
+		else if (tmp2 == Tail) {
+			Tail = tmp1;
+			tmp1Llink->setRlink(tmp2);
+		}
+		else {
+			tmp2Rlink->setLlink(tmp1);
+			tmp1Llink->setRlink(tmp2);
+		}
+		tmp1Rlink->setLlink(tmp2);
+		tmp2Llink->setRlink(tmp1);
+
+		tmp1->setRlink(tmp2Rlink);
+		tmp2->setLlink(tmp1Llink);
+
+		tmp1->setLlink(tmp2Llink);
+		tmp2->setRlink(tmp1Rlink);
+	}
+}
+
 void DoubleList::Reverse()
 {
 	Node *current = Head;
