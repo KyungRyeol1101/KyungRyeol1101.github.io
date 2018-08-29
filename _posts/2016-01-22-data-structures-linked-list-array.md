@@ -28,7 +28,141 @@ comments: true
 ### C++로 구현한 양방향 연결 리스트(Double Linked List)
 
 {% highlight c++ %}
+/**
+ * 연결리스트(LinkedList)에 사용할 노드 클래스
+ */
+class Node
+{
+private:
+	Node *Llink;
+	Node *Rlink;
 
+	int IDNode;
+	int Data;
+public:
+	Node();
+	~Node();
+
+	
+	Node *getLlink() { return Llink; }
+	Node *getRlink() { return Rlink; }
+
+	void setLlink(Node *llink) { Llink = llink; }
+	void setRlink(Node *rlink) { Rlink = rlink; }
+
+	int getData() { return Data; }
+	void setData(int _Data) { Data = _Data; }
+
+	int GetID() { return IDNode; }
+	void SetID(int idnum) { IDNode = idnum; }
+};
+
+/**
+ * Double Linked List 클래스
+ */
+class DoubleList
+{
+private:
+	Node *Head;
+	Node *Tail;
+	int IDCount;
+public:
+	DoubleList();
+	~DoubleList();
+
+	Node *getHead() { return Head; }
+	Node *getTail() { return Tail; }
+
+	Node *ArrangeNode(int pos);
+
+	void insertNode(int _data, int _location); //삽입 추가 (위치 입력 가능)
+	void delNode(int _location); //삭제 (위치 입력 가능)
+	void displayNode(); //출력
+	void AllDel(); //모두 삭제
+	int CountNode(); //현재 노드 갯수
+	int Find(int _location); //위치를 찾아 노드 데이터 찾기
+	void Reverse(); //뒤집기
+};
+
+/**
+ * Double Linked List 메뉴
+ */
+void Manager::Doublerun() {
+	int _menu = 0;
+	int find = 0;
+	int Num = 0;
+	int _position = 0;
+
+	while (true) {
+		cout << "1.추가 2.삭제 3.출력 4.전체삭제 5.노드 총 갯수\n6.찾기 7.링크드 뒤집기\n입력 : ";
+		cin >> _menu;
+
+		switch (_menu)
+		{
+		case INSERT:
+			cout << "추가할 정수 : ";
+			cin >> Num;
+			cout << "위치 입력 : ";
+			cin >> _position;
+			doublelist->insertNode(Num, _position);
+			break;
+		case DEL:
+			if (doublelist->getHead() == NULL) {
+				cout << "데이터가 없습니다." << endl << endl;
+			}
+			else {
+				int _location = 0;
+				cout << "데이터 삭제할 위치 : ";
+				cin >> _location;
+				doublelist->delNode(_location);
+			}
+			break;
+		case COUT:
+			if (doublelist->getHead() == NULL) {
+				cout << "데이터가 없습니다." << endl << endl;
+			}
+			else {
+				doublelist->displayNode();
+			}
+			break;
+		case ALLDEL:
+			if (doublelist->getHead() == NULL) {
+				cout << "데이터가 없습니다." << endl << endl;
+			}
+			else {
+				doublelist->AllDel();
+			}
+			break;
+		case COUNTNODE:
+			cout << "총 갯수 : " << doublelist->CountNode() << endl;
+			break;
+		case SEARCH:
+			if (doublelist->getHead() == NULL) {
+				cout << "데이터가 없습니다." << endl << endl;
+			}
+			else {
+				cout << "몇 번째 데이터 : ";
+				cin >> find;
+				cout << "당신이 찾는 데이터 : " << doublelist->Find(find) << endl << endl;
+			}
+			break;
+		case REVERSE:
+			cout << "뒤집기 전 출력 : " << endl;
+			doublelist->displayNode();
+			doublelist->Reverse();
+			cout << "뒤집기 후 출력 : " << endl;
+			doublelist->displayNode();
+			break;
+		default:
+			cout << "다시 입력해주세요" << endl;
+			break;
+		}
+	}
+}
+
+/**
+ * Node 추가
+ */
 void DoubleList::insertNode(int _data, int _position) {
 	++IDCount;
 	Node *newNode = new Node;
@@ -66,6 +200,9 @@ void DoubleList::insertNode(int _data, int _position) {
 	}
 }
 
+/**
+ * Node 삭제
+ */
 void DoubleList::delNode(int _location) {
 	if (_location == 0) {
 		Head = Head->getRlink();
@@ -90,6 +227,9 @@ void DoubleList::delNode(int _location) {
 	}
 }
 
+/**
+ * Node 출력
+ */
 void DoubleList::displayNode() {
 	Node *Temp = Head;
 	while (true)
@@ -104,6 +244,9 @@ void DoubleList::displayNode() {
 	}
 }
 
+/**
+ * Node 모두 삭제
+ */
 void DoubleList::AllDel() {
 	while (true)
 	{
@@ -116,6 +259,9 @@ void DoubleList::AllDel() {
 	}
 }
 
+/**
+ * 현재 Node 갯수
+ */
 int DoubleList::CountNode() {
 	int count = 0;
 
@@ -126,6 +272,9 @@ int DoubleList::CountNode() {
 	return count;
 }
 
+/**
+ * Node 찾기
+ */
 int DoubleList::Find(int _location) {
 	Node *current = Head;
 	while ((--_location) >= 1) {
@@ -134,70 +283,9 @@ int DoubleList::Find(int _location) {
 	return current->getData();
 }
 
-void DoubleList::Swap(Node * tmp1, Node * tmp2)
-{
-	Node *tmp1Llink = tmp1->getLlink();
-	Node *tmp1Rlink = tmp1->getRlink();
-	Node *tmp2Llink = tmp2->getLlink();
-	Node *tmp2Rlink = tmp2->getRlink();
-
-	if (tmp1 == tmp2) {
-		return;
-	}
-	else if (tmp1->getRlink() == tmp2) {
-		if (tmp1 == Head) {
-			Head = tmp2;
-			if (tmp2 != Tail) {
-				tmp2Rlink->setLlink(tmp1);
-			}
-			else {
-				Tail = tmp1;
-			}
-		}
-		else if (tmp2 == Tail) {
-			Tail = tmp1;
-			tmp1Llink->setRlink(tmp2);
-		}
-		else
-		{
-			tmp2Rlink->setLlink(tmp1);
-			tmp1Llink->setRlink(tmp2);
-		}
-		tmp1->setRlink(tmp2Rlink);
-		tmp2->setLlink(tmp1Llink);
-
-		tmp1->setLlink(tmp2);
-		tmp2->setRlink(tmp1);
-	}
-	else {
-		if (tmp1 == Head) {
-			Head = tmp2;
-			if (tmp2 != Tail) {
-				tmp2Rlink->setLlink(tmp1);
-			}
-			else {
-				Tail = tmp1;
-			}
-		}
-		else if (tmp2 == Tail) {
-			Tail = tmp1;
-			tmp1Llink->setRlink(tmp2);
-		}
-		else {
-			tmp2Rlink->setLlink(tmp1);
-			tmp1Llink->setRlink(tmp2);
-		}
-		tmp1Rlink->setLlink(tmp2);
-		tmp2Llink->setRlink(tmp1);
-
-		tmp1->setRlink(tmp2Rlink);
-		tmp2->setLlink(tmp1Llink);
-
-		tmp1->setLlink(tmp2Llink);
-		tmp2->setRlink(tmp1Rlink);
-	}
-}
-
+/**
+ * Node 뒤집기
+ */
 void DoubleList::Reverse()
 {
 	Node *current = Head;
