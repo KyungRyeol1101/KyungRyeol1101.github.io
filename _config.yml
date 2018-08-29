@@ -61,7 +61,7 @@ steam:              kryoon
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-
+web-app-mode: True
 # Gems
 gems:
   - jekyll-mentions
