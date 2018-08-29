@@ -1,9 +1,10 @@
 ---
 layout: post
-section-type: post
-title: Data Structures & Algorithms
-category: datastructures
-tags: [ 'study' ]
+title: "Data Structures & Algorithms"
+date: 2016-01-22
+excerpt: 링크드리스트와 배열
+tags: [Data Structures, Algorithms, C++]
+comments: true
 ---
 
 # Data Structures & Algorithms : 자료구조 & 알고리즘 (C++)
