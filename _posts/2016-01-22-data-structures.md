@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Data Structures & Algorithms"
+title: "Linked List & Array"
 date: 2016-01-22
 excerpt: 링크드리스트와 배열
-tags: [Data Structures, Algorithms, C++]
+tags: [data structures, algorithms, c++, linked list, array]
 comments: true
 ---
 
-# Data Structures & Algorithms : 자료구조 & 알고리즘 (C++)
+# Linked List & Array : 링크드 리스트 & 배열 (C++)
 
 ## 자료구조란?
 
