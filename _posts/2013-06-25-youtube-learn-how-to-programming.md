@@ -2,7 +2,7 @@
 layout: post
 title:  "프로그래밍을 배워야 하는 이유는?"
 date:   2016-03-15
-excerpt: ""Everybody in this country should learn how to program a computer... because it teaches you how to think.""
+excerpt: "Everybody in this country should learn how to program a computer... because it teaches you how to think."
 tag:
 - programming
 - youtube
