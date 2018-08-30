@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linked List & Array"
+title: Linked List & Array
 date: 2016-01-22
 excerpt: 링크드리스트와 배열
 tags: [data structures, c++, linked list, array]
