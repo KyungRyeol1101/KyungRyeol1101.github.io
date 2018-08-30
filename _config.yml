@@ -1,7 +1,7 @@
 # Site
 title:              KyungRyeol (Cris)
-bio:                '“Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.”'
-description:        "간단하게 설명할 수 없으면 제대로 이해하지 못하는 것이다. – 알버트 아인슈타인"
+bio:                'Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.'
+description:        '간단하게 설명할 수 없으면 제대로 이해하지 못하는 것이다. – 알버트 아인슈타인'
 reading_time:       true
 words_per_minute:   200
 logo:               'https://github.com/KyungRyeol1101.png?size=200'
@@ -14,7 +14,6 @@ url:                https://kyungryeol1101.github.io
 permalink:          /:title/
 markdown:           kramdown
 highlighter:        rouge
-linenos: true
 kramdown:
   auto_ids:         true
   footnote_nr:      1
