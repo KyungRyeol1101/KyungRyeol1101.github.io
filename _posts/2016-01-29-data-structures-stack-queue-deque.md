@@ -87,11 +87,86 @@ Syntax highlighting is a feature that displays source code, in different colors 
 
 To modify styling and highlight colors edit `/assets/css/syntax.css`.
 
-{% highlight css %}
-#container {
-    float: left;
-    margin: 0 -240px 0 0;
-    width: 100%;
+
+### C++로 구현한 스택 & 큐 & 덱 (Stack & Queue & Deque)
+[이전에 작성한 양방향 링크드 리스트의 코드를 재활용](https://kyungryeol1101.github.io/data-structures-linked-list-array/)
+
+{% highlight cpp %}
+class Queue
+{
+private:
+	DoubleList *doublelist;
+public:
+	Queue();
+	~Queue();
+	
+	DoubleList *getdouble() { return doublelist; }
+
+	void enqueue(int data, int position);
+	void dequeue(int position);
+	void display();
+};
+
+
+#include "Queue.h"
+
+Queue::Queue()
+{
+	doublelist = new DoubleList;
+}
+
+Queue::~Queue()
+{
+}
+
+void Queue::enqueue(int data, int _position) {
+	doublelist->insertNode(data, _position);
+}
+
+void Queue::dequeue(int position) {
+	doublelist->delNode(position);
+}
+
+void Queue::display() {
+	doublelist->displayNode();
+}
+
+class Stack
+{
+private:
+	DoubleList *doublelist;
+public:
+	Stack();
+	~Stack();
+	
+	DoubleList *getdouble() { return doublelist; }
+
+	void Push(int data, int position);
+	void Pop(int position);
+	void display();
+};
+
+#include "Stack.h"
+
+Stack::Stack()
+{
+	doublelist = new DoubleList;
+}
+
+Stack::~Stack()
+{
+}
+
+void Stack::Push(int data, int position) {
+	doublelist->insertNode(data, position);
+}
+
+void Stack::Pop(int position) {
+	doublelist->delNode(position);
+}
+
+void Stack::display() {
+	doublelist->displayNode();
 }
 {% endhighlight %}
 
