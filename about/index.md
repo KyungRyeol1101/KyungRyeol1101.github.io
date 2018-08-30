@@ -3,7 +3,7 @@ layout: page
 title: About Me
 tags: [about, me]
 date: 1991-11-01
-comments: false
+comments: true
 ---
     
 <center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
