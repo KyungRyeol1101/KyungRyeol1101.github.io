@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bubble sort
+title: "[Algorithms] Bubble sort"
 date: 2016-02-02
 excerpt: 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘
 tags: [algorithms, c++, bubble, sort]
@@ -23,7 +23,7 @@ comments: true
 ## 버블 정렬(bubble sort) 알고리즘의 예제
 * 배열에 7, 4, 5, 1, 3이 저장되어 있다고 가정하고 자료를 오름차순으로 정렬해 보자.
 <figure>
-	<img src="/images/algorithms/bubble-sort/bubble-sort.png">
+	<img src="/images/algorithms/bubble-sort/bubble-sort.jpg">
 </figure>
 
 * 1회전

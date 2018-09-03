@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insertion sort
+title: "[Algorithms] Insertion sort"
 date: 2016-02-03
 excerpt: 매 순서마다 해당 원소를 삽입할 수 있는 위치를 찾는 알고리즘
 tags: [algorithms, c++, insertion, sort]
@@ -31,7 +31,7 @@ comments: true
 <figure>
 	<img src="/images/algorithms/insertion-sort/insertion-sort.png">
 </figure>
-
+\images\algorithms\bubble_sort
 * 1회전: 두 번째 자료인 5를 Key로 해서 그 이전의 자료들과 비교한다.
   - Key 값 5와 첫 번째 자료인 8을 비교한다. 8이 5보다 크므로 8을 5자리에 넣고 Key 값 5를 8의 자리인 첫 번째에 기억시킨다.
 * 2회전: 세 번째 자료인 6을 Key 값으로 해서 그 이전의 자료들과 비교한다.
