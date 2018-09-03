@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Algorithm] Bubble sort?
+title: [Algorithm] Bubble sort
 date: 2016-02-02
 excerpt: 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘
 tags: [algorithms, c++, bubble, sort]
