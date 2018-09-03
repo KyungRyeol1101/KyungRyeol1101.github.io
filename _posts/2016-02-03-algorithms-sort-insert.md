@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [알고리즘] 삽입 정렬(insertion sort)이란?
+title: [Algorithm] Insertion sort?
 date: 2016-02-03
 excerpt: 매 순서마다 해당 원소를 삽입할 수 있는 위치를 찾는 알고리즘
 tags: [algorithms, c++, insertion, sort]
