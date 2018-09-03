@@ -7,7 +7,7 @@ tags: [algorithms, c++, insertion, sort]
 comments: true
 ---
 
-# Insert : 삽입 (C++)
+# Insertion : 삽입 (C++)
 
 ## 삽입 정렬(insertion sort) 알고리즘 개념 요약
 * 손안의 카드를 정렬하는 방법과 유사하다.
@@ -51,7 +51,42 @@ comments: true
 [이전에 작성한 양방향 링크드 리스트의 코드를 재활용](https://kyungryeol1101.github.io/data-structures-linked-list-array/)
 
 {% highlight cpp %}
+void DoubleList::InsertSort() {
+	Node *Current(NULL);
+	for (int i = 1; i < CountNode(); i++) {
+		Current = ArrangeNode(i);
+		for (int j = i; j > 0; j--) {
+			if (Current->getData() < Current->getLlink()->getData()) {
+				Node *tmp = Current->getLlink();
+				if (tmp == Head) {
+					Head = Current;
+					if (Current == Tail) {
+						Tail = tmp;
+					}
+					else if (Current != Tail) {
+						Current->getRlink()->setLlink(tmp);
+					}
+				}
+				else if (Current == Tail) {
+					Tail = tmp;
+					tmp->getLlink()->setRlink(Current);
+				}
+				else {
+					tmp->getLlink()->setRlink(Current);
+					Current->getRlink()->setLlink(tmp);
+				}
+				Current->setLlink(tmp->getLlink());
+				tmp->setRlink(Current->getRlink());
 
+				Current->setRlink(tmp);
+				tmp->setLlink(Current);
+
+				Current = tmp;
+			}
+			Current = Current->getLlink();
+		}
+	}
+}
 {% endhighlight %}
 
 ## 삽입 정렬(insertion sort) 알고리즘의 특징
@@ -94,6 +129,3 @@ comments: true
 ### References
 
 - [삽입 정렬 - 위키백과](https://ko.wikipedia.org/wiki/%EC%82%BD%EC%9E%85_%EC%A0%95%EB%A0%AC)
-
-### C++로 구현한 스택 & 큐 & 덱 (Stack & Queue & Deque)
-[이전에 작성한 양방향 링크드 리스트의 코드를 재활용](https://kyungryeol1101.github.io/data-structures-linked-list-array/)

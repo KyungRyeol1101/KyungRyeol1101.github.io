@@ -39,7 +39,46 @@ comments: true
 [이전에 작성한 양방향 링크드 리스트의 코드를 재활용](https://kyungryeol1101.github.io/data-structures-linked-list-array/)
 
 {% highlight cpp %}
+void DoubleList::BubbleSort() {
+	Node *Current(NULL);
+	for (int i = 0; i < CountNode() - 1; i++) {
+		Current = Head;
+		for (int j = 0; j < CountNode() - (i + 1); j++) {
+			if (Current->getData() > Current->getRlink()->getData()) {
+				Node *tmp = Current->getRlink();
+				if (tmp == NULL) {
+					return;
+				}
+				if (Current == Head) {
+					Head = tmp;
+					if (tmp == Tail) {
+						Tail = Current;
+					}
+					else if(tmp != Tail)
+					{
+						tmp->getRlink()->setLlink(Current);
+					}
+				}
+				else if (tmp == Tail) {
+					Tail = Current;
+					Current->getLlink()->setRlink(tmp);
+				}
+				else {
+					tmp->getRlink()->setLlink(Current);
+					Current->getLlink()->setRlink(tmp);
+				}
+				Current->setRlink(tmp->getRlink());
+				tmp->setLlink(Current->getLlink());
 
+				Current->setLlink(tmp);
+				tmp->setRlink(Current);
+				
+				Current = tmp;
+			}
+			Current = Current->getRlink();
+		}
+	}
+}
 {% endhighlight %}
   
 ## 버블 정렬(bubble sort) 알고리즘의 특징
@@ -74,4 +113,4 @@ comments: true
   * 퀵 정렬, 힙 정렬, 합병 정렬, 기  수 정렬
   
 # References
-> - [버블 정렬 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC)
+- [버블 정렬 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC)
