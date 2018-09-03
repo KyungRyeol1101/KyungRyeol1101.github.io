@@ -5,7 +5,6 @@ date:   2016-03-15
 excerpt: "Everybody in this country should learn how to program a computer... because it teaches you how to think. - Steve Jobs"
 tag:
 - programming
-- youtube
 comments: true
 ---
 
