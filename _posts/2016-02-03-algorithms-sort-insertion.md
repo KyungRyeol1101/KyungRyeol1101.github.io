@@ -2,12 +2,12 @@
 layout: post
 title: "[Algorithms] Insertion sort"
 date: 2016-02-03
-excerpt: 매 순서마다 해당 원소를 삽입할 수 있는 위치를 찾는 알고리즘
+excerpt: "매 순서마다 해당 원소를 삽입할 수 있는 위치를 찾는 알고리즘"
 tags: [algorithms, c++, insertion, sort]
 comments: true
 ---
 
-# Insertion : 삽입 (C++)
+# Insertion sort : 삽입 정렬 (C++)
 
 ## 삽입 정렬(insertion sort) 알고리즘 개념
 * 손안의 카드를 정렬하는 방법과 유사하다.
@@ -37,7 +37,7 @@ comments: true
   - Key 값 4와 두 번째 자료인 5를 비교한다. 5가 Key 값보다 크므로 5를 세 번째 자리에 기억시킨다.
   - Key 값 4와 첫 번째 자료인 2를 비교한다. 2가 Key 값보다 작으므로 4를 두 번째 자리에 기억시킨다.
 
-### C++로 구현한 삽입정렬 (Insertion)
+### C++로 구현한 삽입 정렬 (Insertion)
 [이전에 작성한 양방향 링크드 리스트의 코드를 재활용](https://kyungryeol1101.github.io/data-structures-linked-list-array/)
 
 {% highlight cpp %}

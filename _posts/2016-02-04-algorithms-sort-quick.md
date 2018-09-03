@@ -2,12 +2,12 @@
 layout: post
 title: "[Algorithms] Quick sort"
 date: 2016-02-04
-excerpt: 분할 정복 알고리즘의 하나, 평균적으로 매우 빠른 수행 속도를 자랑하는 정렬 방법
+excerpt: "분할 정복 알고리즘의 하나, 평균적으로 매우 빠른 수행 속도를 자랑하는 정렬 방법"
 tags: [algorithms, c++, quick, sort]
 comments: true
 ---
 
-# Quick : 퀵 (C++)
+# Quick sort : 퀵 정렬 (C++)
 
 ## 퀵 정렬(quick sort) 알고리즘의 개념 요약
 * '찰스 앤터니 리처드 호어(Charles Antony Richard Hoare)'가 개발한 정렬 알고리즘
@@ -25,7 +25,7 @@ comments: true
     * 부분 리스트에서도 다시 피벗을 정하고 피벗을 기준으로 2개의 부분 리스트로 나누는 과정을 반복한다.
   4. 부분 리스트들이 더 이상 분할이 불가능할 때까지 반복한다.
     * 리스트의 크기가 0이나 1이 될 때까지 반복한다.
-* ![](/images/algorithms/quick_sort/quick-sort-concepts.png){: width="350" height="370"}
+* ![](/images/algorithms/quick_sort/quick-sort-concepts.png)
 
 ## 퀵 정렬(quick sort) 알고리즘의 구체적인 개념
 * 하나의 리스트를 피벗(pivot)을 기준으로 두 개의 비균등한 크기로 분할하고 분할된 부분 리스트를 정렬한 다음, 두 개의 정렬된 부분 리스트를 합하여 전체가 정렬된 리스트가 되게 하는 방법이다.
@@ -34,7 +34,7 @@ comments: true
   * **정복(Conquer):** 부분 배열을 정렬한다. 부분 배열의 크기가 충분히 작지 않으면 **순환 호출** 을 이용하여 다시 분할 정복 방법을 적용한다.
   * **결합(Combine):** 정렬된 부분 배열들을 하나의 배열에 합병한다.
   * 순환 호출이 한번 진행될 때마다 최소한 하나의 원소(피벗)는 최종적으로 위치가 정해지므로, 이 알고리즘은 반드시 끝난다는 것을 보장할 수 있다.
-* ![](/images/algorithms/quick_sort/quick-sort.png){: width="430" height="650"}
+* ![](/images/algorithms/quick_sort/quick-sort.png)
 
 
 ## 퀵 정렬(quick sort) 알고리즘의 예제
@@ -122,7 +122,7 @@ int DoubleList::Partition(int Left, int Right)
   * 최선의 경우 T(n) = **O(nlog₂n)**
 * 최악의 경우
   * 리스트가 계속 불균형하게 나누어지는 경우 (특히, 이미 정렬된 리스트에 대하여 퀵 정렬을 실행하는 경우)
-  * ![](/images/algorithms/quick_sort/sort-time-complexity-etc2.png){: width="350" height="280"}
+  * ![](/images/algorithms/quick_sort/sort-time-complexity-etc2.png)
   * 비교 횟수
     * *순환 호출의 깊이*
       * 레코드의 개수 n이 2의 거듭제곱이라고 가정(n=2^k)했을 때, 순환 호출의 깊이는 n임을 알 수 있다.

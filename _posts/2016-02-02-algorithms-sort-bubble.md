@@ -2,12 +2,12 @@
 layout: post
 title: "[Algorithms] Bubble sort"
 date: 2016-02-02
-excerpt: 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘
+excerpt: "서로 인접한 두 원소를 검사하여 정렬하는 알고리즘"
 tags: [algorithms, c++, bubble, sort]
 comments: true
 ---
 
-# Bubble : 버블 (C++)
+# Bubble sort : 버블 정렬 (C++)
 
 ## 버블 정렬(bubble sort) 알고리즘의 개념
 * 서로 **인접한** 두 원소를 검사하여 정렬하는 알고리즘
@@ -29,7 +29,7 @@ comments: true
 * 4회전
   * 첫 번째의 1과 두 번째의 3을 비교하여 교환하지 않는다.
 
-### C++로 구현한 버블정렬 (Bubble)
+### C++로 구현한 버블 정렬 (Bubble)
 [이전에 작성한 양방향 링크드 리스트의 코드를 재활용](https://kyungryeol1101.github.io/data-structures-linked-list-array/)
 
 {% highlight cpp %}
