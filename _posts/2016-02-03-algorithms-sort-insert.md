@@ -29,9 +29,9 @@ comments: true
 * 배열에 8, 5, 6, 2, 4가 저장되어 있다고 가정하고 자료를 오름차순으로 정렬해 보자.
 
 <figure>
-	<img src="/images/algorithms/insertion-sort/insertion-sort.png">
+	<img src="/images/algorithms/insertion_sort/insertion-sort.png">
 </figure>
-\images\algorithms\bubble_sort
+
 * 1회전: 두 번째 자료인 5를 Key로 해서 그 이전의 자료들과 비교한다.
   - Key 값 5와 첫 번째 자료인 8을 비교한다. 8이 5보다 크므로 8을 5자리에 넣고 Key 값 5를 8의 자리인 첫 번째에 기억시킨다.
 * 2회전: 세 번째 자료인 6을 Key 값으로 해서 그 이전의 자료들과 비교한다.
@@ -83,7 +83,7 @@ comments: true
 
 # 정렬 알고리즘 시간복잡도 비교
 <figure>
-	<img src="/images/algorithms/insertion-sort/sort-time-complexity.png">
+	<img src="/images/algorithms/insertion_sort/sort-time-complexity.png">
 </figure>
 
 * 단순(구현 간단)하지만 비효율적인 방법

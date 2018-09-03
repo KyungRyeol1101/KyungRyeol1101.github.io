@@ -23,7 +23,7 @@ comments: true
 ## 버블 정렬(bubble sort) 알고리즘의 예제
 * 배열에 7, 4, 5, 1, 3이 저장되어 있다고 가정하고 자료를 오름차순으로 정렬해 보자.
 <figure>
-	<img src="/images/algorithms/bubble-sort/bubble-sort.jpg">
+	<img src="/images/algorithms/bubble_sort/bubble-sort.png">
 </figure>
 
 * 1회전
@@ -65,7 +65,7 @@ comments: true
 
 # 정렬 알고리즘 시간복잡도 비교
 <figure>
-	<img src="/images/algorithms/bubble-sort/sort-time-complexity.png">
+	<img src="/images/algorithms/bubble_sort/sort-time-complexity.png">
 </figure>
 
 * 단순(구현 간단)하지만 비효율적인 방법
