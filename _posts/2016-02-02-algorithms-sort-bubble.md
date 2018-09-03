@@ -17,9 +17,8 @@ comments: true
 
 ## 버블 정렬(bubble sort) 알고리즘의 예제
 * 배열에 7, 4, 5, 1, 3이 저장되어 있다고 가정하고 자료를 오름차순으로 정렬해 보자.
-<figure>
-	<img src="/images/algorithms/bubble_sort/bubble-sort.png">
-</figure>
+
+* ![](/images/algorithms/bubble_sort/bubble-sort.png)
 
 * 1회전
   * 첫 번째 자료 7을 두 번째 자료 4와 비교하여 교환하고, 두 번째의 7과 세 번째의 5를 비교하여 교환하고, 세 번째의 7과 네 번째의 1을 비교하여 교환하고, 네 번째의 7과 다섯 번째의 3을 비교하여 교환한다. 이 과정에서 자료를 네 번 비교한다. 그리고 가장 큰 자료가 맨 끝으로 이동하므로 다음 회전에서는 맨 끝에 있는 자료는 비교할 필요가 없다.
@@ -98,9 +97,8 @@ void DoubleList::BubbleSort() {
 * T(n) = **O(n^2)**
 
 # 정렬 알고리즘 시간복잡도 비교
-<figure>
-	<img src="/images/algorithms/bubble_sort/sort-time-complexity.png">
-</figure>
+
+![](/images/algorithms/bubble_sort/sort-time-complexity.png)
 
 * 단순(구현 간단)하지만 비효율적인 방법
   * 삽입 정렬, 선택 정렬, **버블 정렬**
@@ -108,4 +106,5 @@ void DoubleList::BubbleSort() {
   * 퀵 정렬, 힙 정렬, 합병 정렬, 기  수 정렬
   
 # References
+
 - [버블 정렬 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC)

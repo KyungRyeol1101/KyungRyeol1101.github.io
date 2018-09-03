@@ -109,7 +109,7 @@ int DoubleList::Partition(int Left, int Right)
 ## 퀵 정렬(quick sort)의 시간복잡도
 * 최선의 경우
   * 비교 횟수
-    * ![](/images/algorithm-quick-sort/sort-time-complexity-etc1.png)
+    * ![](/images/algorithms/quick_sort/sort-time-complexity-etc1.png)
     * *순환 호출의 깊이*
       * 레코드의 개수 n이 2의 거듭제곱이라고 가정(n=2^k)했을 때, n=2^3의 경우, 2^3 -> 2^2 -> 2^1 -> 2^0 순으로 줄어들어 순환 호출의 깊이가 3임을 알 수 있다. 이것을 **일반화하면** n=2^k의 경우, k(k=log₂n)임을 알 수 있다.
       * k=log₂n
@@ -122,7 +122,7 @@ int DoubleList::Partition(int Left, int Right)
   * 최선의 경우 T(n) = **O(nlog₂n)**
 * 최악의 경우
   * 리스트가 계속 불균형하게 나누어지는 경우 (특히, 이미 정렬된 리스트에 대하여 퀵 정렬을 실행하는 경우)
-  * ![](/images/algorithm-quick-sort/sort-time-complexity-etc2.png){: width="350" height="280"}
+  * ![](/images/algorithms/quick_sort/sort-time-complexity-etc2.png){: width="350" height="280"}
   * 비교 횟수
     * *순환 호출의 깊이*
       * 레코드의 개수 n이 2의 거듭제곱이라고 가정(n=2^k)했을 때, 순환 호출의 깊이는 n임을 알 수 있다.
@@ -137,7 +137,7 @@ int DoubleList::Partition(int Left, int Right)
 * 평균
   * 평균 T(n) = **O(nlog₂n)**
   * 시간 복잡도가 O(nlog₂n)를 가지는 다른 정렬 알고리즘과 비교했을 때도 가장 빠르다.
-  * 퀵 정렬이 불필요한 데이터의 이동을 줄이고 먼 거리의 데이터를 교환할 뿐만 아니라, 한 번 결정된 피벗들이 추후 연산에서 제외되는 특성 때문이다.
+  * 퀵 정렬이 불필요한 데이터의 이동을 줄이고 먼 거리의 데이터를 교환할 뿐만 아니라, 한 번 결정된 피벗	들이 추후 연산에서 제외되는 특성 때문이다.
 
 
 # 정렬 알고리즘 시간복잡도 비교
