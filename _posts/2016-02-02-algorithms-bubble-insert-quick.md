@@ -2,7 +2,7 @@
 layout: post
 title: [알고리즘] 버블 정렬(bubble sort)이란?
 date: 2016-02-02
-excerpt: 버블정렬 : 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘
+excerpt: 버블정렬 서로 인접한 두 원소를 검사하여 정렬하는 알고리즘
 tags: [algorithms, c++, bubble, sort]
 comments: true
 ---
