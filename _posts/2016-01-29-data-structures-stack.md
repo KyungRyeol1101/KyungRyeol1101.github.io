@@ -96,4 +96,40 @@ void Stack::Pop(int position) {
 void Stack::display() {
 	doublelist->displayNode();
 }
+
+//Manager.cpp
+void Manager::StackRun() {
+	int menu = 0;
+	int _data = 0;
+
+	while (true)
+	{
+		cout << "1.삽입\n2.반환\n3.출력\n입력 : ";
+		cin >> menu;
+
+		switch (menu)
+		{
+		case INSERT:
+			cout << "추가 할 데이터 : ";
+			cin >> _data;
+			stack->Push(_data, 0);
+			stack->display();
+			break;
+		case DEL:
+			stack->Pop(0);
+			stack->display();
+			break;
+		case COUT:
+			if (stack->getdouble()->getHead() == NULL) {
+				cout << "데이터가 없습니다." << endl << endl;
+			}
+			else {
+				stack->display();
+			}
+			break;
+		default:
+			break;
+		}
+	}
+}
 {% endhighlight %}
