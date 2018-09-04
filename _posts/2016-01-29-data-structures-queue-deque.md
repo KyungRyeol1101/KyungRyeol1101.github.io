@@ -75,41 +75,41 @@ underflow 자료가 없다면 스택에는 삭제(Dequeue할 때)할 자료가 �
 [이전에 작성한 양방향 링크드 리스트의 코드를 재활용](https://kyungryeol1101.github.io/data-structures-linked-list-array/)
 
 {% highlight cpp %}
-class Stack
+class Queue
 {
 private:
 	DoubleList *doublelist;
 public:
-	Stack();
-	~Stack();
+	Queue();
+	~Queue();
 	
 	DoubleList *getdouble() { return doublelist; }
 
-	void Push(int data, int position);
-	void Pop(int position);
+	void enqueue(int data, int position);
+	void dequeue(int position);
 	void display();
 };
 
-#include "Stack.h"
+#include "Queue.h"
 
-Stack::Stack()
+Queue::Queue()
 {
 	doublelist = new DoubleList;
 }
 
-Stack::~Stack()
+Queue::~Queue()
 {
 }
 
-void Stack::Push(int data, int position) {
-	doublelist->insertNode(data, position);
+void Queue::enqueue(int data, int _position) {
+	doublelist->insertNode(data, _position);
 }
 
-void Stack::Pop(int position) {
+void Queue::dequeue(int position) {
 	doublelist->delNode(position);
 }
 
-void Stack::display() {
+void Queue::display() {
 	doublelist->displayNode();
 }
 
