@@ -64,7 +64,7 @@ int main() {
 
 Lvalue 참조 타입에 Rvalue를 대입하려고 하거나 Rvalue 참조 타입에 Lvalue를 대입하려고 하면 compile error가 나는 것을 볼 수 있습니다.
 여기서 왜 Rvalue 참조자가 필요한 것일까요?
-표현식이 종료되면 더 이상 존재하지 않는 임시적인 값을 참조해서 무엇을 하려는지에 대해서 **[Move Semantics](https://kyungryeol1101.github.io/cpp-rvalue-reference/)**에 post를 참고해주시기 바랍니다.
+표현식이 종료되면 더 이상 존재하지 않는 임시적인 값을 참조해서 무엇을 하려는지에 대해서 **[Move Semantics](https://kyungryeol1101.github.io/cpp-rvalue-reference/)**의 post를 참고해주시기 바랍니다.
 
 ### Reference
 
