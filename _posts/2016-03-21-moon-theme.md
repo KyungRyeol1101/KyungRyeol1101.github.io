@@ -29,6 +29,20 @@ comments: true
 
 ## 어려웠던 점 및 느낀 점
 
+## 프로젝트 설명
+
+## 기간
+
+## 기여도
+
+## 사용 언어
+
+## 사용 기술
+
+## 환경
+
+## 개발툴
+
 ![Moon Homepage](https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png)    
 
 <center><b>Moon</b> is a minimal, one column jekyll theme.</center>
