@@ -88,7 +88,7 @@ int Arr[512];
 
 {% endhighlight %}
 
-포함 감시 기능을 이용하여 두 번째 헤더 파일이 포함될 때 #ifndef가 거짓이 되어 헤더 파일이 포함되지 않는다. FILENAME_H 부분은 관례상 파일명을 이용해서 이렇게 명명한다. _FILENAME_H 또는 __FILENAME_H__ 등 잘 사용되지 않는 문자열을 파일 이름을 사용해서 만드는 것이다.
+포함 감시 기능을 이용하여 두 번째 헤더 파일이 포함될 때 #ifndef가 거짓이 되어 헤더 파일이 포함되지 않는다. FILENAME_H 부분은 관례상 파일명을 이용해서 이렇게 명명한다. '_FILENAME_H' 또는 '__FILENAME_H__' 등 잘 사용되지 않는 문자열을 파일 이름을 사용해서 만드는 것이다.
 
 ### 매크로 함수(Macro Function)
 
@@ -173,6 +173,21 @@ printf("Hello, world!");
 ### error
 
 - 컴파일러는 이 명령을 만나게 되면 해당 메시지를 출력하고 컴파일을 중지한다. C++ 컴파일러에서만 동작하게 하는 다음 코드를 참조하자.
+
+{% highlight c++ %}
+
+#if !defined(__cplusplus)
+#error C++ compiler required.
+#endif
+
+// __cplusplus는 C++ 컴파일러일 경우에 정의되는 내장 매크로이다.
+
+{% endhighlight %}
+
+### pragma
+
+- #pragma는 컴파일러마다 고유하게 사용할 수 있는 명령어이다. 따라서 그 문법은 컴파일러마다 다르고 그 종류도 많다.
+- #pragma once 같은 경우 위의 포함 감시 기능을 컴파일러가 알아서 해준다. 즉, 한 번 include 된 헤더 파일은 중복해서 포함되지 않도록 컴파일러가 처리해 준다.
 
 ## 컴파일 과정 - 전단부 (Front-End)
 
