@@ -88,7 +88,7 @@ int Arr[512];
 
 {% endhighlight %}
 
-포함 감시 기능을 이용하여 두 번째 헤더 파일이 포함될 때 #ifndef가 거짓이 되어 헤더 파일이 포함되지 않는다. FILENAME_H 부분은 관례상 파일명을 이용해서 이렇게 명명한다. '_FILENAME_H' 또는 '__FILENAME_H__' 등 잘 사용되지 않는 문자열을 파일 이름을 사용해서 만드는 것이다.
+포함 감시 기능을 이용하여 두 번째 헤더 파일이 포함될 때 #ifndef가 거짓이 되어 헤더 파일이 포함되지 않는다. FILENAME_H 부분은 관례상 파일명을 이용해서 이렇게 명명한다. _FILENAME_H 또는 __FILENAME_H__ 등 잘 사용되지 않는 문자열을 파일 이름을 사용해서 만드는 것이다.
 
 ### 매크로 함수(Macro Function)
 
@@ -141,7 +141,7 @@ printf("Hello, world!");
 
 - 대부분의 컴파일러는 ASSERT() 매크로를 가지고 있다.
 
-{% highlight cpp %}
+```cpp
 
 #ifndef DEBUG
 #define ASSERT(x)
@@ -154,7 +154,7 @@ printf("Hello, world!");
 	}
 #endif
 
-{% endhighlight %}
+```
 
 위 코드의 위에 #define DEBUG를 포함하면 #define ASSERT(x)는 아무 일도 하지 않고, DEBUG가 정의되지 않으면 그 아래 함수가 정의된다.
 즉, 디버그일 때만 코드가 생성되고 릴리즈시에는 코드가 생서되지 않게 할 수 있는 것이다.
