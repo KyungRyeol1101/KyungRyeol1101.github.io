@@ -43,19 +43,19 @@ comments: true
 * ![](/images/spring/directory/src-main-java.png)
 **src/main/java :** 자바 코드 (컨트롤러, 모델)
 
-* ![](/images/spring/directory/src-main-resources.png)
+![](/images/spring/directory/src-main-resources.png)
 **src/main/resources :** 자바 코드에서 사용할 리소스 (mapper, sql)
 
-* ![](/images/spring/directory/src-test-java.png)
+![](/images/spring/directory/src-test-java.png)
 **src/test/java :** 테스트 코드
 
-* ![](/images/spring/directory/src-test-resources.png)
+![](/images/spring/directory/src-test-resources.png)
 **src/test/resources :** 테스트 코드에서 사용할 리소스
 
-* ![](/images/spring/directory/maven-dependencies.png)
+![](/images/spring/directory/maven-dependencies.png)
 **Maven Dependencies :** 라이브러리 관리도구 (Maven에서 다운받은 jar 파일)
 
-* ![](/images/spring/directory/src-main-webapp.png)
+![](/images/spring/directory/src-main-webapp.png)
 **src :** web 디렉토리
 **src/main/webapp/resources :** js, css, image 등을 관리
 **src/main/webapp/WEB-INF/classes :** 컴파일된 클래스
@@ -81,4 +81,4 @@ https://mvnrepository.com/
 기존의 웹프로젝트의 경우에는 프로젝트에 필요한 모든 라이브러리 파일을 직접 다운로드 받아 해당 라이브러리 폴더에 적용시켜줘야했고, 각각의 프로젝트마다 다시 또 적용해야하는 불편함이 있었는데 Spring의 경우에는 denpendency 태그를 적용시켜주면 알아서 다운로드 받고 해당 프로젝트에 적용할 수 있다. 또한 다른 프로젝트 생성 시에는 같은 denpendency 태그만 적용시켜주면 별도의 다운로드가 필요없이 로컬저장소에 저장된 라이브러리를 자동으로 적용시켜준다.
 
 ### MVN repository에서 msyql 검색 후 dependency 태그 복수 후 pom.xml에 붙여넣기 하면 된다.
-* ![](/images/spring/maven/mvn-repository.PNG)
+![](/images/spring/maven/mvn-repository.PNG)
