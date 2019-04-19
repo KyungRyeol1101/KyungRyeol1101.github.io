@@ -124,8 +124,7 @@ Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행
 {% endhighlight %}
 
 ### 04) HomeController
-{% raw %}
-```liquid
+{% highlighter xml %}
 package com.chris.springmvcproj;
 
 import java.text.DateFormat;
@@ -169,4 +168,4 @@ public class HomeController {
     }
 }
 ```
-{% endraw %}
+{% endhighlighter %}
