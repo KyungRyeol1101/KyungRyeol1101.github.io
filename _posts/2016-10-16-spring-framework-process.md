@@ -19,7 +19,7 @@ Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행
 
 ### DispatcherServlet
 #### Model, Controller, View를 조합하여 browser로 출력해주는 역할을 수행하는 class
-* ![](/images/spring/dispatcherservlet.png)
+* ![](/images/spring/dispatcher-servlet.png)
 
 ### 01) /WEB-INF/web.xml
 #### 웹프로젝트의 배치 기술서(deploy descriptor, 웹프로젝트의 환경 설정 파일)
