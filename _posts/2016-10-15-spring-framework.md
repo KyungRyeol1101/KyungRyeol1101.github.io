@@ -40,7 +40,7 @@ comments: true
 
 # Spring Project Directory 구조
 
-* ![](/images/spring/directory/src-main-java.png)
+![](/images/spring/directory/src-main-java.png)
 **src/main/java :** 자바 코드 (컨트롤러, 모델)
 
 ![](/images/spring/directory/src-main-resources.png)
