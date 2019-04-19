@@ -125,7 +125,7 @@ Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행
 
 ### 04) HomeController
 {% highlight xml %}
-package com.example.spring01;
+package com.chris.springmvcproj;
 
 import java.text.DateFormat;
 import java.util.Date;
