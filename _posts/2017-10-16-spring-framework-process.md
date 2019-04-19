@@ -16,6 +16,10 @@ Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행
 4.해당 Controller가 요청을 처리 후, home을 리턴)
 5.View에 출력
 
+#A
+##B
+###C
+
 #####DispatcherServlet
 ######Model, Controller, View를 조합하여 browser로 출력해주는 역할을 수행하는 class
 * ![](/images/spring/dispatcherservlet.png)<br/>
