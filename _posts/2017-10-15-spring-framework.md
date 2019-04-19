@@ -81,4 +81,4 @@ https://mvnrepository.com/
 기존의 웹프로젝트의 경우에는 프로젝트에 필요한 모든 라이브러리 파일을 직접 다운로드 받아 해당 라이브러리 폴더에 적용시켜줘야했고, 각각의 프로젝트마다 다시 또 적용해야하는 불편함이 있었는데 Spring의 경우에는 denpendency 태그를 적용시켜주면 알아서 다운로드 받고 해당 프로젝트에 적용할 수 있다. 또한 다른 프로젝트 생성 시에는 같은 denpendency 태그만 적용시켜주면 별도의 다운로드가 필요없이 로컬저장소에 저장된 라이브러리를 자동으로 적용시켜준다.
 
 ### MVN repository에서 msyql 검색 후 dependency 태그 복수 후 pom.xml에 붙여넣기 하면 된다.
-* ![](/images/spring/maven/mvn-repository.png)
+* ![](/images/spring/maven/mvn-repository.PNG)
