@@ -9,7 +9,7 @@ comments: true
 
 Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행된다.
 여기서 home.jsp가 구동되는 과정은 아래와 같다.
-![spring-process](./images/spring/spring-process.png)
+![](/images/spring/spring-process.png)
 
 1. 클라이어트 요청(/, root 페이지 요청)
 2. web.xml에서 dispatcherServlet가 클라이언트 요청을 핸들링
@@ -19,7 +19,7 @@ Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행
 
 ### DispatcherServlet
 #### Model, Controller, View를 조합하여 browser로 출력해주는 역할을 수행하는 class
-* ![](/images/spring/dispatcher-servlet.png)
+![](/images/spring/dispatcher-servlet.png)
 
 ### 01) /WEB-INF/web.xml
 #### 웹프로젝트의 배치 기술서(deploy descriptor, 웹프로젝트의 환경 설정 파일)
