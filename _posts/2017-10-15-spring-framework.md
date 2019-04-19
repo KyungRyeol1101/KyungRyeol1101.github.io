@@ -42,19 +42,19 @@ comments: true
 
 * ![](/images/spring/directory/src-main-java.png)
 **src/main/java :** 자바 코드 (컨트롤러, 모델)
-<br/>
+
 * ![](/images/spring/directory/src-main-resources.png)
 **src/main/resources :** 자바 코드에서 사용할 리소스 (mapper, sql)
-<br/>
+
 * ![](/images/spring/directory/src-test-java.png)
 **src/test/java :** 테스트 코드
-<br/>
+
 * ![](/images/spring/directory/src-test-resources.png)
 **src/test/resources :** 테스트 코드에서 사용할 리소스
-<br/>
+
 * ![](/images/spring/directory/maven-dependencies.png)
 **Maven Dependencies :** 라이브러리 관리도구 (Maven에서 다운받은 jar 파일)
-<br/>
+
 * ![](/images/spring/directory/src-main-webapp.png)
 **src :** web 디렉토리
 **src/main/webapp/resources :** js, css, image 등을 관리
@@ -63,7 +63,7 @@ comments: true
 **src/main/webapp/WEB-INF/views :** html, jsp 파일<br/>
 **src/main/webapp/ :** 외부 접근 가능
 **src/main/webapp/WEB-INF :** 외부 접근 불가, 컨트롤러를 경유해서 접근 가능
-<br/>
+
 ### WEB-INF 폴더
 -외부에서 직접 접속이 차단되어있다. 그 이유는 컴파일된 클래스와 Spring 환경설정파일(DB연결정보)이 존재하기 때문이다. JSP 또한 외부로 접속하여 수정되는 것을 방지하기 위한 보안 때문에 외부접근이 금지되어 있기 때문이다.
 
