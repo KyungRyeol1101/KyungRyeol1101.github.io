@@ -7,7 +7,7 @@ tags: [spring, framework, java, programmin, process]
 comments: true
 ---
 
-Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행된다.
+Spring project를 생성하고 바로 실행하면 browser에 home.jsp가 실행된다.\\
 여기서 home.jsp가 구동되는 과정은 아래와 같다.
 ![](/images/spring/spring-process.png)
 
