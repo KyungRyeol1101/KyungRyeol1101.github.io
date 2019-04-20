@@ -2,7 +2,7 @@
 layout: post
 title: "RESTful 하다는 것?"
 date: 2016-10-20
-excerpt: "Restful한 Spring '@ResponseBody', '@RestController', '@Controller VS', 'ResponseEntity'"
+excerpt: "Restful한 Spring @ResponseBody, @RestController, @Controller VS, ResponseEntity"
 tags: [spring, framework, java, programming, controller, mvc]
 comments: true
 ---
@@ -14,7 +14,7 @@ comments: true
 RESTsms 웹의 창시자 중 한 사람인 Roy Fielding이 그의 박사 학위 논문에서, 현재의 웹 아키텍처가 웹의 본래 설계의 우수성을 활용하지 못하므로 웹의 장점을 최대한 활용할 수 있는 네트워크 기반의 아키텍처를 제안했는데 이것이 REST입니다.\\
 REST는 REpresentational State Transfer의 약어로서 부수적인 레이어나 세션 관리를 추가하지 않고도 HTTP프로토콜로 데이터를 전달하는 프레임워크입니다. 또한 클라이언트/서버 간의 구성요소를 엄격히 분리하여 구현은 단순화시키고 확장성과 성능은 높일 수 있는 아키텍처입니다.
 
-### '@'Controller VS, '@'RestController (Controller와 RestController의 차이점)
+### <p>@Controller</p> VS, '@'RestController (Controller와 RestController의 차이점)
 
 전통적인 Spring MVC Controller와 Restful 웹서비스 Controller의 주요 차이점은 HTTP Response Body가 생성되는 방식이다. 기존의 MVC Controlloer는 view 기술을 사용하지만 Restful 웹서비스 Controller는 객체를 반환하기만 하면 객체 데이터는 Json/XML 형식의 HTTP 응답을 직접 작성하게 된다.\\
 정리하자면, '@Controller'의 주 용도는 view(화면)을 return하는 것이고, '@RestController'는 데이터를 return하는 것이 주 용도라고 할 수 있다. 물론, '@Controller'의 경우 method에 '@ResponseBody'를 사용하여 객체를 return 할 수도 있다.
