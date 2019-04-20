@@ -5,9 +5,9 @@ pre.highlight {
 .highlight {
 	background-color: #282c34;
 	font-family: $font2;
-	@include font-size(14);
-	color: #f8f8f2;
-	border-radius: 4px;
+	@include font-size(15);
+	color: #abb2bf;
+	border-radius: 2px;
 	pre {
 		position: relative;
 		margin: 0;
@@ -15,7 +15,7 @@ pre.highlight {
 	}
 	.lineno            { padding-right: 24px; color: lighten(#49483e,50);}
 	.hll               { background-color: #282c34}
-	.c                 { color: #75715e }                            /* Comment                     */
+	.c                 { color: #5c6370;font-style:italic }          /* Comment                     */
 	.err               { color: #960050; background-color: #1e0010 } /* Error                       */
 	.k                 { color: #66d9ef }                            /* Keyword                     */
 	.l                 { color: #ae81ff }                            /* Literal                     */
