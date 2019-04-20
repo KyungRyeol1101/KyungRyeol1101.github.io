@@ -3,7 +3,7 @@ layout: post
 title: "Spring framework home.jsp 구동 과정, web.xml, servlet-context.xml은 무엇인가?"
 date: 2016-10-16
 excerpt: "Spring framework home.jsp 구동 과정과 web.xml, servlet-context.xml은 무엇인지 알아보자"
-tags: [spring, framework, java, programmin, process]
+tags: [spring, framework, java, programming, process]
 comments: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "[Algorithms] Bubble sort"
 date: 2016-02-02
 excerpt: "서로 인접한 두 원소를 검사하여 정렬하는 알고리즘"
-tags: [algorithms, c++, bubble, sort]
+tags: [algorithms, c++, bubble, sort, programming]
 comments: true
 ---
 
@@ -66,7 +66,7 @@ void DoubleList::BubbleSort() {
 
 				Current->setLlink(tmp);
 				tmp->setRlink(Current);
-				
+
 				Current = tmp;
 			}
 			Current = Current->getRlink();
@@ -74,7 +74,7 @@ void DoubleList::BubbleSort() {
 	}
 }
 {% endhighlight %}
-  
+
 ## 버블 정렬(bubble sort) 알고리즘의 특징
 * 장점
   * 구현이 매우 간단하다.
@@ -104,7 +104,7 @@ void DoubleList::BubbleSort() {
   * 삽입 정렬, 선택 정렬, **버블 정렬**
 * 복잡하지만 효율적인 방법
   * 퀵 정렬, 힙 정렬, 합병 정렬, 기  수 정렬
-  
+
 # References
 
 - [버블 정렬 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B1%B0%ED%92%88_%EC%A0%95%EB%A0%AC)
