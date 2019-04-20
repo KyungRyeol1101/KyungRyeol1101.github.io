@@ -1,5 +1,5 @@
 pre.highlight {
-	//padding: 1em;
+	padding: 1em;
 }
 
 .highlight {
@@ -7,11 +7,11 @@ pre.highlight {
 	font-family: $font2;
 	@include font-size(15);
 	color: hsl(220, 14%, 71%);
-	//border-radius: 2px;
+	border-radius: 2px;
 	pre {
-		//position: relative;
-		//margin: 0;
-		//padding: 1em;
+		position: relative;
+		margin: 0;
+		padding: 1em;
 	}
 	//.lineno            { padding-right: 24px; color: lighten(#49483e,50);}
 	.hll               { background-color: hsl(220,13%,18%)}
