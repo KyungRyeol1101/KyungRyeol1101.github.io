@@ -17,15 +17,15 @@ comments: true
 - 데이터 입력은 FRONT 포인터를 통해서 하고, 데이터 삭제는 REAR 포인터를 통해서 한다.
 - 삽입연산을 Enqueue 또는 Put, 삭제연산을 Dequeue 또는 Get라고 한다.
 - 큐에서는 FRONT와 REAR가 같을 때 비어있는 공백큐 임을 알수 있다.
-overflow 큐의 모든 기억장소가 꽉 채워져 있어서 더 이상 데이터를 삽입(Enqueue할 때)할 수 없다.
-underflow 자료가 없다면 스택에는 삭제(Dequeue할 때)할 자료가 없다.
+- overflow : 큐의 모든 기억장소가 꽉 채워져 있어서 더 이상 데이터를 삽입(Enqueue할 때)할 수 없다.
+- underflow : 자료가 없다면 스택에는 삭제(Dequeue할 때)할 자료가 없다.
 
 ### 큐(Queue)의 연산
 큐(Queue)는 **FIFO(First-In-First-Out)** 를 따른다.
-* add(item): item을 리스트의 끝부분에 추가한다.
-* remove(): 리스트의 첫 번째 항목을 제거한다.
-* peek(): 큐에서 가장 위에 있는 항목을 반환한다.
-* isEmpty(): 큐가 비어 있을 때에 true를 반환한다.
+* add(item) : item을 리스트의 끝부분에 추가한다.
+* remove() : 리스트의 첫 번째 항목을 제거한다.
+* peek() : 큐에서 가장 위에 있는 항목을 반환한다.
+* isEmpty() : 큐가 비어 있을 때에 true를 반환한다.
 
 * <mark>주의!</mark>
   * 큐(Queue)에서 처음과 마지막 노드를 갱신할 때 실수가 나오기 쉽다.
@@ -82,7 +82,7 @@ private:
 public:
 	Queue();
 	~Queue();
-	
+
 	DoubleList *getdouble() { return doublelist; }
 
 	void enqueue(int data, int position);
