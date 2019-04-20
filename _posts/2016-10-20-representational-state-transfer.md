@@ -14,6 +14,8 @@ comments: true
 RESTsms 웹의 창시자 중 한 사람인 Roy Fielding이 그의 박사 학위 논문에서, 현재의 웹 아키텍처가 웹의 본래 설계의 우수성을 활용하지 못하므로 웹의 장점을 최대한 활용할 수 있는 네트워크 기반의 아키텍처를 제안했는데 이것이 REST입니다.\\
 REST는 REpresentational State Transfer의 약어로서 부수적인 레이어나 세션 관리를 추가하지 않고도 HTTP프로토콜로 데이터를 전달하는 프레임워크입니다. 또한 클라이언트/서버 간의 구성요소를 엄격히 분리하여 구현은 단순화시키고 확장성과 성능은 높일 수 있는 아키텍처입니다.
 
+**REST는 SOAP와 같은 프로토콜이 아닙니다. REST는 architecture입니다. Resource를 기반으로 하는 architecture이기 때문에 시스템 설계도 Rest에 맞는 설계가 필요한 것입니다.**
+
 ### <code>@Controller VS</code>, <code>@RestController</code> (Controller와 RestController의 차이점)
 
 전통적인 Spring MVC Controller와 Restful 웹서비스 Controller의 주요 차이점은 HTTP Response Body가 생성되는 방식이다. 기존의 MVC Controlloer는 view 기술을 사용하지만 Restful 웹서비스 Controller는 객체를 반환하기만 하면 객체 데이터는 Json/XML 형식의 HTTP 응답을 직접 작성하게 된다.\\
@@ -54,30 +56,112 @@ public class BasicController {
 </html>
 {% endhighlight %}
 
-### Spring MVC REST의 Work Flow
+### Spring MVC REST의 Work Flow (Spring에서 REST하게 데이터가 송수신 되는 과정)
 1. Client는 URI 형식으로 웹서비스에 요청을 보낸다.
 2. 요청은 Handler Mapping과 그 타입을 찾는 DispatcherServlet에 의해 인터셉트
 3. 요청은 Controller에 의해 처리되고 응답은 DispatcherServlet으로 return된 후 DispatcherServlet은 View로 디스패치
 
 위의 그림을 보면 전통적인 Spring MVC Work Flow는 ModelAndView 객체가 Controller에서 Client로 전달되는 것을 알 수 있다. <code>@ResponseBody</code> annotation을 사용하면 View를 return하지 않고 Controller에서 직접 데이터를 return 할 수 있다. Spring 4.0부터는 <code>@RestController</code> annotation을 통해 더 단순화 되었다.
 
+### <code>@ResponseBody</code>
+### Spring 3.x MVC Restful Web Service Work Flow
+![](/images/spring/3x-mvc-restful-web-services-work-flow.png)
 
+#### Controller(BasicController2)
+{% highlight java %}
+@RequestMapping("/basic/*")
+public class BasicController2 {
+  @RequestMapping("/sendVO")
+  //@ResponseBody <- Method 상단 또는 return 타입 앞에 annotation 추가
+  public @ResponseBody BoardVO helloworld(){
+    BoardVO vo = new BoardVO();
+    vo.setBno(1);
+    vo.setWriter("Chris");
+    vo.setContent("게시글 내용입니다.");
+    vo.setRecnt(1);
+    vo.setTitle("게시글 1");
+    vo.setUserName("Chris");
 
+    return vo;
+  }
+}
+{% endhighlight %}
 
+<code>@ResponseBody</code>을 사용하면, Spring은 HTTP 응답에 return 값을 자동으로 변환해준다. Controller Class의 각 Method에 <code>@ResponseBody</code> annotation을 작성해줘야 한다.
 
+### <code>@RestController</code>
+### Spring 4.x MVC Restful Web Service Work Flow
+![](/images/spring/4x-mvc-restful-web-services-work-flow.png)
 
-<code>@ResponseBody</code>와 <code>@RestController</code> 두가지 차이점을 알아보기 전에 우선 Spring에서 REST하게 데이터가 송수신 되는 과정은 다음과 같다.
+#### RestController(RestController)
+{% highlight java %}
+package com.chris.springmvcproj.controller.test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-클라이언트에서 웹서비스에 요청을 보냄.
-Handler Mapping과 그 타입을 찾는 Dispatcher Servlet에 의해 요청이 가로채짐.
-요청은 Controller에 의해 처리되고 응답은 Dispatcher Servlet으로 반환되고 Dispatcher Servlet은 다시 View로 보내게 됩니다.
+import com.chris.springmvcproj.model.board.dto.BoardVO;
 
+@RestController
+@RequestMapping("/basic/*")
+public class ControllerRest {
+  // json객체 리턴
+    @RequestMapping("/sendVO2")
+    public BoardVO sendVO2(){
+        BoardVO vo = new BoardVO();
+        vo.setBno(1);
+        vo.setWriter("Chris");
+        vo.setContent("게시글 내용입니다");
+        vo.setRecnt(1);
+        vo.setTitle("게시글 1");
+        vo.setUserName("Chris");
+        return vo;
+    }
 
-**Spring 4.0부터 추가된 <code>@RestController</code>을 활용, 기존의 <code>@ResponseBody</code> in <code>@Controller</code> 방식을 벗어나 좀 더 쉽게 restful한 코드를 작성 할 수 있음.**
+    // json 객체 배열 리턴
+    @RequestMapping("/sendList")
+    public List<BoardVO> sendList(){
+        // ArrayList 객체 생성
+        List<BoardVO> items = new ArrayList<>();
+        for(int i=1; i <=10; i++){
+            BoardVO vo = new BoardVO(); //vo 객체 생성
+            vo.setBno(i);
+            vo.setWriter("Chris"+i);
+            vo.setContent("게시글 내용입니다"+i);
+            vo.setRecnt(i);
+            vo.setTitle("게시글"+i);
+            vo.setUserName("Chris"+i);
+            items.add(vo); // 리스트에 vo추가
+        }
+        return items; // 리스트를 리턴함
+    }
 
-Spring 4.0에서는 <code>@RestController</code> annotation이 추가 되었는데 Controller Class의 각 Method마다 <code>@ResponseBody</code>을 추가할 필요가 없어졌고, 모든 Method는 <code>@ResponseBody</code> annotation이 기본으로 작동이 된다.
+    // json객체를 map에 저장하여
+    @RequestMapping("/sendMap")
+    public Map<Integer, BoardVO> sendMap(){
+        // Map<Key자료형, Value자료형>
+        Map<Integer, BoardVO> map = new HashMap<Integer, BoardVO>();
+        for(int i=1; i <=10; i++){
+            BoardVO vo = new BoardVO(); //vo 객체 생성
+            vo.setBno(i);
+            vo.setWriter("Chris"+i);
+            vo.setContent("게시글 내용입니다"+i);
+            vo.setRecnt(i);
+            vo.setTitle("게시글"+i);
+            vo.setUserName("Chris"+i);
+            map.put(i, vo); // 맵에 vo추가
+        }
+        return map;
+    }
+}
+{% endhighlight %}
+
+**Spring 4.0에서는 <code>@RestController</code> annotation이 추가 되었는데 Controller Class의 각 Method마다 <code>@ResponseBody</code>을 추가할 필요가 없어졌고, 모든 Method는 <code>@ResponseBody</code> annotation이 기본으로 작동이 된다.**
 
 ### ResponseEntity
 RestController는 별도의 View를 제공하지 않는 형태로 서비스를 실행하기 때문에, 때로는 결과데이터가 예외적인 상황에서 문제가 발생할 수 있다. ResponseEntity는 개발자가 직접 결과 데이터와 HTTP 상태 코드를 직접 제어할 수 있는 클래스로 개발자는 404나 500 같은 HTTP 상태 코드를 전송하고 싶은 데이터와 함께 전송할 수 있기 때문에 좀 더 세밀한 제어가 필요한 경우 사용할 수 있다.
