@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "RESTful 하다는 것?"
+title: "RestController와 Controller (ResponseBody, ResponseEntity)"
 date: 2016-10-20
 excerpt: "Restful한 Spring @ResponseBody, @RestController, @Controller VS, ResponseEntity"
-tags: [spring, framework, java, programming, controller, mvc]
+tags: [spring, framework, java, programming, controller, mvc, restcontroller]
 comments: true
 ---
 
@@ -23,6 +23,14 @@ REST는 REpresentational State Transfer의 약어로서 부수적인 레이어�
 
 ### Spring MVC의 전통적인 Work Flow
 ![](/images/spring/traditional-mvc-work-flow.png)
+
+1. Client는 URI 형식으로 웹서비스에 요청을 보낸다.
+2. 요청은 Handler Mapping과 그 타입을 찾는 DispatcherServlet에 의해 인터셉트
+3. 요청은 Controller에 의해 처리되고 응답은 DispatcherServlet으로 return된 후 DispatcherServlet은 View로 디스패치
+
+위의 그림을 보면 전통적인 Spring MVC Work Flow는 ModelAndView 객체가 Controller에서 Client로 전달되는 것을 알 수 있다. <code>@ResponseBody</code> annotation을 사용하면 View를 return하지 않고 Controller에서 직접 데이터를 return 할 수 있다. Spring 4.0부터는 <code>@RestController</code> annotation을 통해 더 단순화 되었다.
+
+Client -> Request -> DispatcherServlet -> HandlerMapping -> Controller -> View -> DispatcherServlet -> Response -> Client
 
 #### Controller(BasicController)
 {% highlight java %}
@@ -56,16 +64,11 @@ public class BasicController {
 </html>
 {% endhighlight %}
 
-### Spring MVC REST의 Work Flow (Spring에서 REST하게 데이터가 송수신 되는 과정)
-1. Client는 URI 형식으로 웹서비스에 요청을 보낸다.
-2. 요청은 Handler Mapping과 그 타입을 찾는 DispatcherServlet에 의해 인터셉트
-3. 요청은 Controller에 의해 처리되고 응답은 DispatcherServlet으로 return된 후 DispatcherServlet은 View로 디스패치
-
-위의 그림을 보면 전통적인 Spring MVC Work Flow는 ModelAndView 객체가 Controller에서 Client로 전달되는 것을 알 수 있다. <code>@ResponseBody</code> annotation을 사용하면 View를 return하지 않고 Controller에서 직접 데이터를 return 할 수 있다. Spring 4.0부터는 <code>@RestController</code> annotation을 통해 더 단순화 되었다.
-
 ### <code>@ResponseBody</code>
 ### Spring 3.x MVC Restful Web Service Work Flow
 ![](/images/spring/3x-mvc-restful-web-services-work-flow.png)
+
+Client -> Request -> DispatcherServlet -> HandlerMapping -> Controller(ResponseBody) -> Response -> Client
 
 #### Controller(BasicController2)
 {% highlight java %}
@@ -92,6 +95,8 @@ public class BasicController2 {
 ### <code>@RestController</code>
 ### Spring 4.x MVC Restful Web Service Work Flow
 ![](/images/spring/4x-mvc-restful-web-services-work-flow.png)
+
+Client -> HTTP Request -> DispatcherServlet -> HandlerMapping -> RestController(자동 ResponseBody 추가) -> HTTP Response -> Client
 
 #### RestController(RestController)
 {% highlight java %}
@@ -165,6 +170,7 @@ public class ControllerRest {
 
 ### ResponseEntity
 RestController는 별도의 View를 제공하지 않는 형태로 서비스를 실행하기 때문에, 때로는 결과데이터가 예외적인 상황에서 문제가 발생할 수 있다. ResponseEntity는 개발자가 직접 결과 데이터와 HTTP 상태 코드를 직접 제어할 수 있는 클래스로 개발자는 404나 500 같은 HTTP 상태 코드를 전송하고 싶은 데이터와 함께 전송할 수 있기 때문에 좀 더 세밀한 제어가 필요한 경우 사용할 수 있다.
+
 {% highlight java %}
 // ResponseEntity : 데이터 + http status code
 @RequestMapping("/sendMap2")
@@ -191,3 +197,6 @@ public ResponseEntity<Void> sendListAuth(){
   return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 }
 {% endhighlight %}
+
+### @RestController : View가 필요 없는 API만 지원하는 서비스에서 사용, @ResponseBody를 포함하고 있음. (View가 필요한 곳에서 @RestController를 사용해서 Class를 매핑해버리면, View로 접근을 못하는 문제가 있음)
+### @Controller : API와 View를 동시에 사용, 대신 API 서비스는 @ResponseBody를 붙여줘야 함.
