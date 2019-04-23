@@ -198,5 +198,5 @@ public ResponseEntity<Void> sendListAuth(){
 }
 {% endhighlight %}
 
-### @RestController : View가 필요 없는 API만 지원하는 서비스에서 사용, @ResponseBody를 포함하고 있음. (View가 필요한 곳에서 @RestController를 사용해서 Class를 매핑해버리면, View로 접근을 못하는 문제가 있음)
-### @Controller : API와 View를 동시에 사용, 대신 API 서비스는 @ResponseBody를 붙여줘야 함.
+### <code>@RestController</code> : View가 필요 없는 API만 지원하는 서비스에서 사용, <code>@ResponseBody</code>를 포함하고 있음. (View가 필요한 곳에서 @RestController를 사용해서 Class를 매핑해버리면, View로 접근을 못하는 문제가 있음)
+### <code>@Controller</code> : API와 View를 동시에 사용, 대신 API 서비스는 <code>@ResponseBody</code>를 붙여줘야 함.
