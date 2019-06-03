@@ -383,7 +383,7 @@ DATA frame
 * Collection 인터페이스는 List, Set, Queue로 크게 3가지 상위 인터페이스로 분류할 수 있다.
 * Map의 경우 Collection 인터페이스를 상속 받고 있지 않지만 Collection으로 분류된다.
 
-> Collection 인터페이스의 특징
+>>> Collection 인터페이스의 특징
 
 | 인터페이스 | 구현클래스 | 특징 |
 | :-- | :--: | --: |
