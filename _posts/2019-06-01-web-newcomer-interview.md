@@ -538,7 +538,7 @@ DATA frame
 > Collection 인터페이스의 특징
 
 | 인터페이스 | 구현클래스 | 특징 |
-| :-- | :--: | --: |
+| :------------ | :------------: | ------------: |
 | Set | HashSet, TreeSet | 순서를 유지하지 않는 데이터의 집합으로 데이터의 중복을 허용하지 않는다. |
 | List | LinkedList, Vector, ArrayList | 순서가 있는 데이터의 집합으로 데이터의 중복을 허용한다. |
 | Queue | LinkedList, PriorityQueue | List와 유사 |
