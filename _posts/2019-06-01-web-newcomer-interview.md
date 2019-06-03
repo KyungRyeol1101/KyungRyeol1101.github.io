@@ -375,6 +375,23 @@ DATA frame
   * Garbage Collector를 통한 자동적인 메모리 관리
   * 멀티쓰레드(Multi-thread)를 지원
 
+## JAVA 컬렉션(Collection)
+### Java Collections Framework(JCF)
+* Java에서 컬렉션(Collection)이란 데이터의 집합, 그룹을 의미하며 JCF(Java Collections Framework)는 이러한 데이터, 자료구조인 컬렉션과 이를 구현하는 클래스를 정의하는 인터페이스를 제공한다.
+* 다음은 JCF의 상속 구조를 나타낸다.
+![](/images/java/java-collection-framework-structures.png)
+* Collection 인터페이스는 List, Set, Queue로 크게 3가지 상위 인터페이스로 분류할 수 있다.
+* Map의 경우 Collection 인터페이스를 상속 받고 있지 않지만 Collection으로 분류된다.
+
+> Collection 인터페이스의 특징
+
+| 인터페이스 | 구현클래스                     | 특징                                                                                                                                |
+| :-------- | :---------------------------: | ----------------------------------------------------------------------------------------------------------------------------------: |
+| Set       | HashSer, TreeSet              | 순서를 유지하지 않는 데이터의 집합으로 데이터의 중복을 허용하지 않는다.                                                                   |
+| List      | LinkedList, Vector, ArrayList | 순서가 있는 데이터의 집합으로 데이터의 중복을 허용한다.                                                                                  |
+| Queue     | LinkedList, PriorityQueue     | List와 유사                                                                                                                          |
+| Map       | Hashtable, HashMap, TreeMap   | 키(Key), 값(Value)의 쌍으로 이루어진 데이터의 집합으로, 순서는 유지되지 않으며 키(Key)의 중복을 허용하지 않으나 값(Value)의 중복은 허용한다. |
+
 ## Garbage Collection(가비지 컬렉션)
 * 시스템에서 더이상 사용하지 않는 동적 할당된 메모리 블럭을 찾아 자동으로 다시 사용 가능한 자원으로 회수하는 것으로 시스템에서 가비지 컬렉션을 수행하는 부분을 가비지 컬렉터라 부른다.
 
