@@ -385,12 +385,12 @@ DATA frame
 
 > Collection 인터페이스의 특징
 
-| 인터페이스 | 구현클래스                     | 특징                                                                                                                                |
-| :-------- | :---------------------------: | ----------------------------------------------------------------------------------------------------------------------------------: |
-| Set       | HashSer, TreeSet              | 순서를 유지하지 않는 데이터의 집합으로 데이터의 중복을 허용하지 않는다.                                                                   |
-| List      | LinkedList, Vector, ArrayList | 순서가 있는 데이터의 집합으로 데이터의 중복을 허용한다.                                                                                  |
-| Queue     | LinkedList, PriorityQueue     | List와 유사                                                                                                                          |
-| Map       | Hashtable, HashMap, TreeMap   | 키(Key), 값(Value)의 쌍으로 이루어진 데이터의 집합으로, 순서는 유지되지 않으며 키(Key)의 중복을 허용하지 않으나 값(Value)의 중복은 허용한다. |
+| 인터페이스 | 구현클래스 | 특징 |
+| :-- | :--: | --: |
+| Set | HashSet, TreeSet | 순서를 유지하지 않는 데이터의 집합으로 데이터의 중복을 허용하지 않는다. |
+| List | LinkedList, Vector, ArrayList | 순서가 있는 데이터의 집합으로 데이터의 중복을 허용한다. |
+| Queue | LinkedList, PriorityQueue | List와 유사 |
+| Map | Hashtable, HashMap, TreeMap | 키(Key), 값(Value)의 쌍으로 이루어진 데이터의 집합으로, 순서는 유지되지 않으며 키(Key)의 중복을 허용하지 않으나 값(Value)의 중복은 허용한다. |
 
 ## Garbage Collection(가비지 컬렉션)
 * 시스템에서 더이상 사용하지 않는 동적 할당된 메모리 블럭을 찾아 자동으로 다시 사용 가능한 자원으로 회수하는 것으로 시스템에서 가비지 컬렉션을 수행하는 부분을 가비지 컬렉터라 부른다.
