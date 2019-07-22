@@ -38,3 +38,5 @@ comments: false
     - PostgreSQL
   - Environment
     - Azure
+  - Web Library
+    - React
