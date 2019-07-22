@@ -19,22 +19,22 @@ comments: false
 
 - Possess technology
   - Programming Language
-  Java, C, C++, C#, Javascript
+    - Java, C, C++, C#, Javascript
   - Framework
-  Spring
+    - Spring
   - Server
-  MySQL, Apache, Tomcat
+    - MySQL, Apache, Tomcat
   - Tooling / DevOps
-  GitHub
+    - GitHub
   - Environment
-  AWS, Linux, MacOS, Windows
+    - AWS, Linux, MacOS, Windows
 
 - Technology of interest
   - Programming Language
-  Python, Node js, Kotlin
+    - Python, Node js, Kotlin, GO
   - Framework
-  Django, Express
+    - Django, Express
   - Server
-  PostgreSQL
+    - PostgreSQL
   - Environment
-  Azure
+    - Azure
