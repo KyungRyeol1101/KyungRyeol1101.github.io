@@ -20,5 +20,4 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 '''
-
 위에서 admin.conf 파일은 kubeadm init 명령어를 수행했을 때 생성됩니다. 즉, master 노드에서만 kubectl 명령어를 사용할 수 있으며, 다른 노드에서 kubectl 명령어를 사용하고 싶을 때는 master 노드에서 생성한 admin.conf 파일을 복사해오면 일반 노드에서도 kubectl 명령어를 사용할 수 있습니다.
