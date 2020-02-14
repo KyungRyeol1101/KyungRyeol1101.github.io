@@ -8,6 +8,7 @@ comments: true
 ---
 
 ## kubectl command 명령어
+
 ```
 Kubectl get svc
 
