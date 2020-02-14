@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "kubernetes mysql pod 생성"
+title: "Kubernetes mysql pod 생성"
 date: 2020-01-30
-excerpt: "kubernetes mysql pod 생성 관련"
+excerpt: "Kubernetes mysql pod 생성 관련"
 tags: [kubernetes, kubectl, mysql, pod]
 comments: true
 ---
