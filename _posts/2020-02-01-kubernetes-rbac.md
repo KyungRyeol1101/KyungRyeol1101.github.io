@@ -28,7 +28,6 @@ rules:
    verbs: ["get", "watch", "list"]
 ```
 
-
 ClusterRole : Cluster 의 Secret 정보에 대한 읽기 권한을 설정하고 secret-read 라고 정의함. (Node, Endpoint, Namespace, Service 등 모든 권한 설정)
 
 ClusterRole은 namespace 영역이 아니기 때문에 생략된다.
@@ -42,7 +41,6 @@ rules:
   resources: ["secrets"]
   verbs: ["get", "watch", "list"]
 ```
-
 
 Sample (admin-manager.yaml)
 ```
@@ -73,7 +71,6 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-
 ClusterRoleBinding : ManagerGroup 에게 Secret-Read 권한 설정. 즉, Manager-Group 의 모든 사용자가 모든 Namespace에서  Secret 을 읽을 수 있다.
 ```
 apiVersion: rbac.authorization.k8s.io/v1
@@ -89,7 +86,6 @@ roleRef:
   name: secret-read // 바인딩할 Role & ClusterRole 이름과 일치해야 함.
   apiGroup: rbac.authorization.k8s.io
 ```
-
 
 Sample (admin-rolebinding.yaml)
 ```
@@ -122,7 +118,6 @@ Service account may have been revoked. pods is forbidden:
 User "system:serviceaccount:kryoon:default" cannot list pods in the namespace "kryoon":
 Unknown user "system:serviceaccount:kryoon:default".
 ```
-
 
 아래와 같이 pod(resource), log(subresource of pods)에 대한 권한을 추가해야 한다.
 ```
